@@ -1,0 +1,126 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+#rectangle-left{
+    position:relative;
+    width:30vh;
+    height:100vh;
+    background:#ebf0ff;
+}
+#logo{
+    position:absolute;
+    top:0%;
+    left:50%;
+    width:25vh;
+    height:200px;
+    transform: translate(-50%, 0%);
+}
+
+#line{
+    position:absolute;
+    top:145px;
+    left:40px;
+    background:black;
+    width:160px;
+}
+.link{
+    padding: 10px 30px 10px 30px;
+    border-top-right-radius:1em;
+     border-bottom-right-radius:1em;
+    text-decoration: none;
+    font-size:15px;
+    font-weight:600;
+    color:black;
+    opacity: 0.7;
+
+}
+#lnk1{
+    position:absolute;
+    top:31%;
+    left:0px;
+    transform: translate(0%, -50%);
+}
+#lnk2{
+    position:absolute;
+    top:36%;
+    left:0px;
+    transform: translate(0%, -50%);
+    padding: 10px 62px 10px 30px;
+}
+#lnk3{
+    position:absolute;
+    top:41%;
+    left:0px;
+    transform: translate(0%, -50%);
+    padding: 10px 82px 10px 30px;
+}
+#lnk1:before {
+    font-family: "FontAwesome";
+    content: "\f302";
+    padding:7px;
+}
+#lnk2:before {
+    font-family: "FontAwesome";
+    content: "\f304";
+    padding:8px;
+}
+
+#lnk3:before {
+    font-family: "FontAwesome";
+    content: "\f53f";
+    padding:8px;
+}
+
+.link:hover{
+    color: #039be5;
+    background-color:white;
+    opacity:0.5;
+}
+
+
+
+#telegram{
+    position:absolute;
+    left: 10%;
+    top: 93%;
+    color: black;
+    padding:10px;
+}
+
+#vk{
+    position:absolute;
+    left:35%;
+    top:93%;
+    color: black;
+    padding:10px;
+}
+
+
+
+.ksusha{
+display: inline;
+position:absolute;
+top: 1vh;
+left: 88vh;
+}
+
+#ks_photo{
+width:44%;
+}
+
+.hearth-text{
+display:inline;
+position:absolute;
+top: 52vh;
+left:65vh;
+text-align: center;
+}
+
+.quote{
+position:absolute;
+margin:0px;
+top:85vh;
+left:65vh;
+font-size:32px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Арты</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_arts.css') }}">
+    <script src="https://kit.fontawesome.com/c414d432b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <a id="home" href="http://127.0.0.1:5000">Главная</a>
+
+
+
+    <div class="photo-book">
+        <img class="image" src="{{ url_for('static', filename='art1.jpg') }}">
+        <img class="image" src="{{ url_for('static', filename='art2.jpg') }}">
+        <img class="image" src="{{ url_for('static', filename='art3.jpg') }}">
+        <img class="image" src="{{ url_for('static', filename='art4.jpg') }}">
+        <img class="image" src="{{ url_for('static', filename='art5.jpg') }}">
+        <img class="image" src="{{ url_for('static', filename='art6.jpg') }}">
+        <img class="image" src="{{ url_for('static', filename='art7.png') }}">
+    </div>
+
+<button id="prevButton">&lt;</button>
+ <button id="nextButton">&gt;</button>
+
+
+
+ <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const prevButton = document.getElementById("prevButton");
+            const nextButton = document.getElementById("nextButton");
+            const photos = document.querySelectorAll(".photo-book img");
+            let currentPhotoIndex = 0;
+
+            // Функция для отображения текущей фотографии
+            function showPhoto(index) {
+                photos.forEach((photo, i) => {
+                    if (i === index) {
+                        photo.style.display = "block";
+                    } else {
+                        photo.style.display = "none";
+                    }
+                });
+            }
+
+            // Показать первую фотографию при загрузке страницы
+            showPhoto(currentPhotoIndex);
+
+            // Обработчик события для кнопки "следующая"
+            nextButton.addEventListener("click", function() {
+                currentPhotoIndex++;
+                if (currentPhotoIndex >= photos.length) {
+                    currentPhotoIndex = 0;
+                }
+                showPhoto(currentPhotoIndex);
+            });
+
+            // Обработчик события для кнопки "предыдущая"
+            prevButton.addEventListener("click", function() {
+                currentPhotoIndex--;
+                if (currentPhotoIndex < 0) {
+                    currentPhotoIndex = photos.length - 1;
+                }
+                showPhoto(currentPhotoIndex);
+            });
+        });
+    </script>
+</body>
+</html>
